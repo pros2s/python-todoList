@@ -1,0 +1,45 @@
+body {
+    background-color: #eee;
+}
+
+.header {
+    background-color: #2F2F2F;
+}
+
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav {
+    justify-content: left;
+}
+
+.nav__block {
+    display: block;
+    height: 40px;
+    margin: 5px 5px 5px;
+}
+
+.nav-link {
+    color: #fff;
+    font-weight: 700;
+}
+
+.nav-link:hover {
+    color: #8B8B8B;
+
+    border-bottom: solid #fff 2px;
+}
+
+.logo {
+    margin: auto 0;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.container {
+    max-width: 1000px;
+}
