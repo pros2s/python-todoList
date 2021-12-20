@@ -10,6 +10,7 @@
 
     <link rel="stylesheet"
           href="{% static 'css/bootstrap.min.css' %}">
+
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 
 </head>
@@ -18,7 +19,10 @@
     <header class="header masthead mb-auto">
         <div class="container">
             <div class="header__inner">
-                <div class="logo">mainWeb</div>
+                <div class="Logo">
+                    <a class="Logo__link"
+                       href="{% url 'home' %}">mainWeb</a>
+                </div>
 
                 <div class="nav">
                   <div class="nav__block">
