@@ -6,13 +6,13 @@
 
 
 {% block content %}
-    <h1>Создайте задание</h1>
-    <form method="post">
+    <h1 class="hello__title center">Создай задание</h1>
+    <form class="taskForm" method="post">
         {% csrf_token %}
         {{ form.title }}<br>
         {{ form.task }}<br>
         <button class="btn btn-success" type="submit">
-            Добавить
+            Создать
         </button>
         <span>{{ error }}</span>
     </form>

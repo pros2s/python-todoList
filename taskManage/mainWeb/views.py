@@ -4,16 +4,16 @@ from .forms import TaskForm
 
 
 def index(request):
-    tasks = Task.objects.order_by('-id')[:4]
-    return render(request, 'mainWeb/index.html', {
-        'title': 'Главная страница',
-        'tasks': tasks
+    return render(request, 'mainWeb/Index.html', {
+        'title': 'Главная страница'
     })
 
 
-def about(request):
-    return render(request, 'mainWeb/about.html', {
-        'title': 'О нас'
+def taskList(request):
+    tasks = Task.objects.order_by('-id')[:7]
+    return render(request, 'mainWeb/taskList.html', {
+        'title': 'Список заданий',
+        'tasks': tasks
     })
 
 
@@ -23,7 +23,7 @@ def create(request):
         form = TaskForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('home')
+            return redirect('taskList')
         else:
             error = 'Неверные данные'
 

@@ -6,16 +6,12 @@
 
 
 {% block content %}
-    <h1 class="tasklist">Список заданий</h1>
-
-    {% if tasks %}
-        {% for el in tasks %}
-            <div class="taskout">
-                <h3>{{ el.title }}</h3>
-                <p>{{ el.task }}</p>
-            </div>
-        {% endfor %}
-    {% else %}
-        <p class="taskclear">Добавьте задание!</p>
-    {% endif %}
+    <div class="hello">
+        <h2 class="hello__title">Привет</h2>
+        <h4 class="hello__text">Это небольшой проект todo
+            list</h4>
+        <h5 class="hello__click">Нажми
+            <span>Create</span>, чтобы
+            создать задание!</h5>
+    </div>
 {% endblock %}

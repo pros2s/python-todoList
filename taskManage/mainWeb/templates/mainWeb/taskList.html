@@ -1,0 +1,21 @@
+{% extends 'mainWeb/main.html' %}
+
+{% block title %}
+    {{ title }}
+{% endblock %}
+
+
+{% block content %}
+    <h1 class="hello__title center">Список заданий</h1>
+
+    {% if tasks %}
+        {% for el in tasks %}
+            <div class="taskout">
+                <h3>{{ el.title }}</h3>
+                <p>{{ el.task }}</p>
+            </div>
+        {% endfor %}
+    {% else %}
+        <p class="taskclear">Добавьте задание!</p>
+    {% endif %}
+{% endblock %}
